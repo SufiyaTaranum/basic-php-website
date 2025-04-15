@@ -1,9 +1,12 @@
-FROM ubuntu:latest
+FROM php:8.1-apache
 
-RUN apt-get update -y && apt-get install -y apache2
-RUN apt-get install -y php libapache2-mod-php
+# Copy your app code to Apache's web root
+COPY . /var/www/html/
 
-ADD . /var/www/html/
+# Open port 80
 EXPOSE 80
-ENTRYPOINT apachectl -D FOREGROUND
+
+# Enable .htaccess support (optional, if needed)
+RUN a2enmod rewrite
+
 
