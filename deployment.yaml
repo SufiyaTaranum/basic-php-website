@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookalbumapplication
+  name: bookapp
   labels:
-    app: bookalbumapplication
+    app: bookapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bookalbumapplication
+      app: bookapp
   template:
     metadata:
       labels:
-        app: bookalbumapplication
+        app: bookapp
     spec:
       containers:
-      - name: bookalbumapp
-        image: sufiyataranum/bookalbumapplication:v1
+      - name: bookapp
+        image: sufiyataranum/bookapp:v1
         ports:
         - containerPort: 80
