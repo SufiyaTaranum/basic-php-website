@@ -1,10 +1,10 @@
-FROM ubuntu:latest
+FROM php:8.1-apache
 
-RUN apt-get update -y && apt-get install -y apache2
-RUN apt-get install -y php libapache2-mod-php
+COPY . /var/www/html/
 
-ADD . /var/www/html/
 EXPOSE 80
-ENTRYPOINT apachectl -D FOREGROUND
+
+# Optional: Enable Apache rewrite module
+RUN a2enmod rewrite
 
 
