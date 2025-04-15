@@ -15,7 +15,7 @@ spec:
         app: bookalbum2
     spec:
       containers:
-      - name: bookapp
+      - name: bookalbum2
         image: sufiyataranum/bookalbum2:v1
         ports:
         - containerPort: 80
