@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookalbum
+  name: bookalbum1
   labels:
-    app: bookalbum
+    app: bookalbum1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bookalbum
+      app: bookalbum1
   template:
     metadata:
       labels:
-        app: bookalbum
+        app: bookalbum1
     spec:
       containers:
-      - name: bookalbum
-        image: bacdocker/phpexam:v1
+      - name: bookalbum1
+        image: sufiyataranum/php_application:v1
         ports:
         - containerPort: 80
