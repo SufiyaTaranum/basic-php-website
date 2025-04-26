@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: bookalbum2
-        image: sufiyataranum/bookalbum2:v1
+        image: sufiyataranum/php_apppp:v1
         ports:
         - containerPort: 80
